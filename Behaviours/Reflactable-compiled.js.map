@@ -1,1 +1,0 @@
-{"version":3,"sources":["Reflactable.js"],"names":[],"mappings":"","file":"Reflactable-compiled.js","sourcesContent":["/*\nclass Reflactable {\n    constructor(options) {\n        this.options = options;\n    }\n}*/\n"]}
