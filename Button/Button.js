@@ -4,8 +4,8 @@ class Button extends Base {
         this.options = options;
         this.text = this.options.text;
         this.disabled = this.options.disabled;
-        this.buttonElement;
 
+        this.buttonElement;
         if (!this.buttonElement) {
             this.createElement();
         }
