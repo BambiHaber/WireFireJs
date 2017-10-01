@@ -92,7 +92,11 @@ var peopleDataProcessor = new DataProcessor({
  */
 var peopleList = new List({
     dataSource: peopleDataProcessor,
-    rowTemplate: '${firstname} ${lastName}'
+    rowTemplate: '${firstname} ${lastName}',
+    events: {
+        rowRendered: {method: wire.announce.bind(this.wire), params: 'peopleListRowRendered'},
+        listRendered: {method: wire.announce.bind(this.wire), params: 'peopleListRendered'}
+    }
 });
 
 

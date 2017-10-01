@@ -22,10 +22,13 @@
   background: linear-gradient(to right, #d4e4ef 0%, #86aecc 100%);
   position: relative;
 }
-.designer {
+#designer {
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 .tool {
+  white-space: pre;
   padding: 2px;
   margin: 12px auto;
   height: 30px;
@@ -126,17 +129,55 @@ span.move {
   margin-top: 5px;
   margin-left: 25px;
 }
+.editableObject .methodsContainer {
+  width: 100%;
+  display: table;
+  background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+}
+.editableObject .methodsContainer .fieldWrapper {
+  width: 100%;
+  clear: both;
+  float: left;
+}
+.editableObject .methodsContainer .fieldWrapper label {
+  margin-left: 26px;
+  float: left;
+}
+.editableObject .methodsContainer .fieldWrapper .floater {
+  float: right;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.editableObject .methodsContainer .fieldWrapper .floater .singlemethod {
+  display: inline;
+}
+.editableObject .methodsContainer .fieldWrapper span {
+  transition: 1s;
+}
+.editableObject .methodsContainer .fieldWrapper span:hover {
+  color: #bcffa9;
+}
+.editableObject .methodsContainer .fieldWrapper span.connected {
+  color: #79ff25;
+  text-shadow: #ecff44;
+}
 .connectContainer {
   display: inline-block;
   float: left;
 }
 .connectContainer .connectionPoint {
+  display: inline;
+  margin-left: 3px;
   position: relative;
-  right: 12px;
-  top: 6px;
+  top: 7px;
+  transition: 1s;
 }
 .connectContainer .connectionPoint:hover {
-  color: greenyellow;
+  color: #bcffa9;
+}
+.connectContainer .connectionPoint.connected {
+  color: #79ff25;
+  text-shadow: #ecff44;
 }
 .contentContainer {
   background: linear-gradient(to right, #b2e1ff 0%, #66b6fc 100%);
@@ -145,6 +186,7 @@ span.move {
 .eventContainer {
   background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
   display: table;
+  width: 100%;
 }
 h6 {
   height: 18px;
@@ -180,4 +222,4 @@ svg {
   position: fixed;
   pointer-events: none;
 }
-(node:5230) DeprecationWarning: util.print is deprecated. Use console.log instead.
+(node:4224) DeprecationWarning: util.print is deprecated. Use console.log instead.

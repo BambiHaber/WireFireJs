@@ -29,11 +29,14 @@
   position: relative;
 }
 
-.designer {
+#designer {
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 
 .tool {
+  white-space: pre;
   padding: 2px;
   margin: 12px auto;
   height: 30px;
@@ -139,17 +142,55 @@ span.move {
     margin-top: 5px;
     margin-left: 25px;
   }
+  .methodsContainer {
+    width: 100%;
+    display: table;
+    background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    .fieldWrapper {
+      width: 100%;
+      clear: both;
+      float: left;
+      label {
+        margin-left: 26px;
+        float: left;
+      }
+      .floater {
+        float: right;
+        margin-right: 6px;
+        margin-top: 4px;
+        .singlemethod {
+          display: inline;
+        }
+      }
+      span {
+        transition: 1s;
+        &:hover {
+          color: #bcffa9;
+        }
+        &.connected {
+          color: #79ff25;
+          text-shadow: #ecff44;
+        }
+      }
+    }
+  }
 }
 
 .connectContainer {
   display: inline-block;
   float: left;
   .connectionPoint {
+    display: inline;
+    margin-left: 3px;
     position: relative;
-    right: 12px;
-    top: 6px;
+    top: 7px;
+    transition: 1s;
     &:hover {
-      color: greenyellow;
+      color: #bcffa9;
+    }
+    &.connected {
+      color: #79ff25;
+      text-shadow: #ecff44;
     }
   }
 }
@@ -162,6 +203,7 @@ span.move {
 .eventContainer {
   background: linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
   display: table;
+  width: 100%;
 }
 
 h6 {

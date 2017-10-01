@@ -3,12 +3,16 @@ class Wire {
         this.eventMap = [];
     }
 
-    announce(eventName) {
+    announce(eventName, params) {
         console.log('announcing ', eventName);
 
         this.eventMap.forEach((singleEvent)=> {
             if (singleEvent['name'] === eventName) {
-                singleEvent.callback();
+                if (params) {
+                    singleEvent.callback(params)
+                } else {
+                    singleEvent.callback();
+                }
             }
         });
 

@@ -37,7 +37,6 @@ class List {
     }
 
     renderRow(data) {
-
         let rowEl = document.createElement('li');
         let rowText = '';
 
